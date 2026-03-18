@@ -128,3 +128,30 @@ document.querySelector(".hire-me").addEventListener("click", function (e) {
 //     allSection.forEach((sec) => sec.classList.remove("open"));
 //   }
 // });
+
+const phoneElement = document.getElementById("phoneNumber");
+let pressTimer;
+
+// 👉 Click = Call
+phoneElement.addEventListener("click", function () {
+  window.location.href = "tel:+918369101430";
+});
+
+// 👉 Long Press = Copy
+phoneElement.addEventListener("mousedown", startPress);
+phoneElement.addEventListener("touchstart", startPress);
+
+phoneElement.addEventListener("mouseup", cancelPress);
+phoneElement.addEventListener("mouseleave", cancelPress);
+phoneElement.addEventListener("touchend", cancelPress);
+
+function startPress() {
+  pressTimer = setTimeout(() => {
+    navigator.clipboard.writeText("+918369101430");
+    alert("Phone number copied!");
+  }, 800);
+}
+
+function cancelPress() {
+  clearTimeout(pressTimer);
+}

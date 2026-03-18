@@ -175,16 +175,16 @@ ul {
 
 .btn:hover {
   transform: scale(1.05);
-  background-color: green;
-  font-weight: 700;
-  color: rgb(60, 57, 57);
+  background-color: rgb(11, 171, 11);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 
 .cv:hover {
   transform: scale(1.05);
-  background-color: rgb(249, 252, 98);
-  font-weight: 700;
-  color: rgb(60, 57, 57);
+  background-color: rgb(11, 171, 11);
+  font-weight: 500;
+  color: rgb(255, 255, 255);
 }
 
 .shadow-dark {
@@ -735,7 +735,13 @@ h3.my-profession {
 
 .contact .contact-info-item .icon,
 .contact .contact-info-item h4 {
+  transition: all 0.2s ease;
+}
+
+.contact .contact-info-item .icon:hover,
+.contact .contact-info-item h4:hover {
   cursor: pointer;
+  transform: scale(1.09);
 }
 
 .contact .contact-info-item .icon .fa {
